@@ -18,13 +18,10 @@ function App() {
       .then((recipesArray) => setRecipesData(recipesArray));
   }, []);
 
-  function callBack(e) {
-    setTestData(e);
-  }
   console.log(recipesData);
 
   const recipesArr = recipesData.map((recipe) => {
-    return <RecipeCard key={recipe.id} recipe={recipe} callBack={callBack} />;
+    return <RecipeCard key={recipe.id} recipe={recipe} />;
   });
 
   return (
@@ -38,10 +35,10 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/all-recipes">
-            <RecipeList recipesArr={recipesArr} callBack={callBack} />
+            <RecipeList recipesArr={recipesArr} />
           </Route>
           <Route exact path="/recipes/:id">
-            <Reviews recipesArr={recipesArr} testData={testData} />
+            <Reviews recipesData={recipesData} />
           </Route>
           <Route exact path="/login">
             <Login />

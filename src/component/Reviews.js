@@ -1,17 +1,24 @@
 import React from "react";
-import ReviewCard from "react";
 import NewCommentForm from "./NewCommentForm";
+import ReviewCardComponent from "./ReviewCardComponent";
 
-function Reviews() {
+function Reviews({ recipesData }) {
+  const recipesR = recipesData.map((recipe) => {
+    return recipe;
+  });
+
+  const rr = recipesR.map((recipe_hash) => {
+    return recipe_hash.reviews;
+  });
+
+  const review = rr.flat().map((review) => {
+    return (review = { review });
+  });
+
+  console.log(review);
   return (
     <div>
-      <h1>Reviews</h1>
-      <h2>name</h2>
-      <p>image</p>
-      <p>ingredient</p>
-      <p>direction</p>
-      <p>reviews</p>
-      <p>comments</p>
+      <ReviewCardComponent />
       <NewCommentForm />
     </div>
   );
