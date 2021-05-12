@@ -1,5 +1,5 @@
-import React from "react"
-import RecipeCard from "./RecipeCard"
+import React from "react";
+import RecipeCard from "./RecipeCard";
 
 function RecipeList({recipesData}) {
     const recipesArr = recipesData.map((recipe) =>

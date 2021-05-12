@@ -1,15 +1,16 @@
-import React from "react"
+import React from "react";
+import { Link } from "react-router-dom";
 
 function RecipeCard({recipe}) {
-    const {name, image, ingredient, direction} = recipe
-
+    const {id, name, image, ingredient, direction} = recipe
+    console.log(recipe)
     return (
-    <div>
+    <div >
         <h1>{name}</h1>
         <img src={image} alt="food-image" width="475px" height="350"/>
         <p>ingredients: {ingredient}</p>
         <p>directions: {direction}</p>
-        <h3>comments: </h3>
+        <Link to={`/project/${id}`}>View Details</Link>
     </div>
     )
 }
