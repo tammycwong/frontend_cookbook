@@ -1,6 +1,6 @@
 import React from "react";
 
-function RecipeList({ recipesArr, callBack }) {
+function RecipeList({ recipesArr }) {
   return (
     <div>
       <ul className="recipe">{recipesArr}</ul>

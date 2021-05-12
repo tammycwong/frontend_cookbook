@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function RecipeCard({ recipe, callBack }) {
+function RecipeCard({ recipe }) {
   const { id, name, image } = recipe;
-
-  callBack(recipe);
 
   return (
     <div>

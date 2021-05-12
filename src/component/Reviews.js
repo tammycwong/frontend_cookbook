@@ -1,8 +1,8 @@
 import React from "react";
 import ReviewCard from "react";
+import NewCommentForm from "./NewCommentForm";
 
-function Reviews({ testData }) {
-  console.log(testData);
+function Reviews() {
   return (
     <div>
       <h1>Reviews</h1>
@@ -12,6 +12,7 @@ function Reviews({ testData }) {
       <p>direction</p>
       <p>reviews</p>
       <p>comments</p>
+      <NewCommentForm />
     </div>
   );
 }
