@@ -1,8 +1,10 @@
 import './App.css';
 import React, {useEffect, useState} from "react";
 import Header from "./component/Header";
-import Navigation from "./component/Navigation";
-import MainContent from "./component/MainContent";
+import RecipeList from "./component/RecipeList";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Home from "./component/Home";
+import Reviews from "./component/Reviews";
 
 function App() {
   const [recipesData, setRecipesData] = useState([])
@@ -16,9 +18,21 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header/>
-        <Navigation/>
       </header>
-      <MainContent recipesData={recipesData}/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route exact path="/all-recipes">
+            <RecipeList recipesData={recipesData}/>
+          </Route>
+          <Route exact path="/recipes/:id">
+            <Reviews/>
+          </Route>
+
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

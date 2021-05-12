@@ -5,11 +5,11 @@ function RecipeCard({recipe}) {
 
     return (
     <div>
-        <h1>Recipe Name: {name}</h1>
+        <h1>{name}</h1>
         <img src={image} alt="food-image" width="475px" height="350"/>
         <p>ingredients: {ingredient}</p>
         <p>directions: {direction}</p>
-        <h3>reviews:</h3>
+        <h3>comments: </h3>
     </div>
     )
 }
