@@ -15,6 +15,11 @@ function Header() {
           Login
         </Link>
       </span>
+      <span>
+        <Link className="button" to="/add-recipe">
+          Add Recipie
+        </Link>
+      </span>
     </div>
   );
 }

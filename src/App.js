@@ -7,10 +7,10 @@ import Home from "./component/Home";
 import Reviews from "./component/Reviews";
 import Login from "./component/Login";
 import RecipeCard from "./component/RecipeCard";
+import AddRecipe from "./component/AddRecipe";
 
 function App() {
   const [recipesData, setRecipesData] = useState([]);
-  const [testData, setTestData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/recipes")
@@ -23,6 +23,11 @@ function App() {
   const recipesArr = recipesData.map((recipe) => {
     return <RecipeCard key={recipe.id} recipe={recipe} />;
   });
+
+  function handleAddRecipe(newRecipe) {
+    const updatedRecipes = [...recipesData, newRecipe]
+      setRecipesData(updatedRecipes);
+  }
 
   return (
     <div className="App">
@@ -42,6 +47,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/add-recipe">
+            <AddRecipe />
           </Route>
         </Switch>
       </BrowserRouter>

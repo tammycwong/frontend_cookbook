@@ -18,7 +18,7 @@ function Reviews({ recipesData }) {
   console.log(review);
   return (
     <div>
-      <ReviewCardComponent />
+      <ReviewCardComponent review={review}/>
       <NewCommentForm />
     </div>
   );
