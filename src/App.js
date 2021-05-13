@@ -18,15 +18,20 @@ function App() {
       .then((recipesArray) => setRecipesData(recipesArray));
   }, []);
 
-  console.log(recipesData);
+  // console.log(recipesData);
 
   const recipesArr = recipesData.map((recipe) => {
-    return <RecipeCard key={recipe.id} recipe={recipe} />;
+    return <RecipeCard key={recipe.id} recipe={recipe} onDelete={handleDeleteRecipe}/>;
   });
 
   function handleAddRecipe(newRecipe) {
     const updatedRecipes = [...recipesData, newRecipe]
       setRecipesData(updatedRecipes);
+  }
+  function handleDeleteRecipe(id) {
+    const updatedRecipes = recipesData.filter(recipe =>
+      recipe.id !== id)
+      setRecipesData(updatedRecipes)
   }
 
   return (
@@ -40,16 +45,16 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/all-recipes">
-            <RecipeList recipesArr={recipesArr} />
+            <RecipeList recipesArr={recipesArr} onDelete={handleDeleteRecipe}/>
           </Route>
           <Route exact path="/recipes/:id">
-            <Reviews recipesData={recipesData} />
+            <Reviews recipesData={recipesData}/>
+          </Route>
+          <Route exact path="/add-recipe">
+            <AddRecipe onAddRecipe={handleAddRecipe}/>
           </Route>
           <Route exact path="/login">
             <Login />
-          </Route>
-          <Route exact path="/add-recipe">
-            <AddRecipe />
           </Route>
         </Switch>
       </BrowserRouter>

@@ -1,13 +1,18 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import NewCommentForm from "./NewCommentForm";
 import ReviewCardComponent from "./ReviewCardComponent";
 
-function Reviews({ recipesData }) {
-  const recipesR = recipesData.map((recipe) => {
-    return recipe;
-  });
+function Reviews({ recipesData}) {
+  // const recipesR = recipesData.map((recipe) => {
+  //   return recipe;
+  // });
 
-  const rr = recipesR.map((recipe_hash) => {
+  
+  let {id} = useParams()
+
+  console.log(id)
+  const rr = recipesData.map((recipe_hash) => {
     return recipe_hash.reviews;
   });
 
@@ -18,7 +23,7 @@ function Reviews({ recipesData }) {
   console.log(review);
   return (
     <div>
-      <ReviewCardComponent review={review}/>
+      <ReviewCardComponent review={review} id={id}/>
       <NewCommentForm />
     </div>
   );

@@ -1,11 +1,19 @@
 import React from "react";
-function ReviewCardComponent({review}) {
+import RccChild from "./RccChild";
 
-  console.log(review)
+function ReviewCardComponent({review, id}) {
+  const test = review.map((review1)=> {
+    return review1.review;
+  })
+  const test2 = test.map((review2) =>{
+    return (
+      <RccChild key={review2.id} review2={review2} />
+    )
+  })
+  // console.log(review2)
   return (
     <div>
-      {/* <p><b>Rating:</b>{rating}</p>
-      <p><b>Comment:</b>{comment}</p> */}
+      {test2}
     </div>
   )
 }

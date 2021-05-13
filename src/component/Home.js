@@ -9,6 +9,7 @@ function Home() {
   return (
     <div>
       <p>MISSION STATEMENT</p>
+      <img className="banner" src="https://www.verilife.com/sites/default/files/uploads/Blog%20Images/Baking%20with%20Cannabis_Blog_800x650.jpg" alt="cover"></img>
       <button onClick={handleClick}>18+</button>
     </div>
   );
