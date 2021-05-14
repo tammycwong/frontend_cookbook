@@ -1,17 +1,15 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, {useState} from "react";
+// import { useParams } from "react-router-dom";
 import NewCommentForm from "./NewCommentForm";
 import ReviewCardComponent from "./ReviewCardComponent";
 
 function Reviews({ recipesData}) {
-  // const recipesR = recipesData.map((recipe) => {
-  //   return recipe;
-  // });
+  const [reviewId, setReviewId]= useState()
 
   
-  let {id} = useParams()
+  // let {id} = useParams()
 
-  console.log(id)
+  // console.log(id)
   const rr = recipesData.map((recipe_hash) => {
     return recipe_hash.reviews;
   });
