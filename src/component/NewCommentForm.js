@@ -2,9 +2,9 @@ import React from "react";
 
 function NewCommentForm() {
   return (
-    <form>
+    <form className="comment" >
       <textarea placeholder="comment here"></textarea> <br />
-      <button type="submit">submit</button>
+      <button className="reviews" type="submit">submit</button>
     </form>
   );
 }

@@ -2,7 +2,6 @@
   text-align: left;
   font-family: arial;
   align-items: center;
-  width: 70%;
 }
 .details {
   color: #282c34;
@@ -54,6 +53,7 @@ img {
   width: 250px;
   border: none;
   display: inline-block;
+  color: white;
 }
 .button {
   background-color: #4caf50;
@@ -67,7 +67,7 @@ img {
 .reviews {
   /* border: 2px black solid; */
   border:none;
-  color: black;
+  color: white;
   text-decoration: none;
   text-align: center;
   /* border-radius: 8px; */
@@ -75,11 +75,11 @@ img {
   width: 250px;
   font-size: 11pt;
   display: inline-block;
-  background-color:#f8e078;
+  background-color:#282c34;
 }
 .banner {
   border-radius: 12px;
-  width: 80%;
+  width: 70%;
   height: 600px;
   opacity: 0.8;
 }
@@ -96,7 +96,7 @@ textarea {
 }
 .homebutton {
   border: 2px black solid;
-  color: black;
+  color: white;
   text-decoration: none;
   text-align: center;
   border-radius: 8px;
@@ -104,6 +104,7 @@ textarea {
   width: 400px;
   font-size: 11pt;
   margin-left: 50px;
+  background-color: #4caf50;
 }
 .flex {
   display: flex;
@@ -111,5 +112,15 @@ textarea {
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+.homepage {
+  align-items: center;
+  justify-content: center;
+}
+.commentpage{
+  padding: 20px;
+}
+.comment {
+  padding-left: 20px;
 }
