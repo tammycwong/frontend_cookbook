@@ -2,15 +2,15 @@
   text-align: left;
   font-family: arial;
   align-items: center;
+  width: 70%;
 }
 .details {
-  /* font-size: 12pt; */
   color: #282c34;
 }
 .card {
   border: solid #f2f2f2 1px;  
   display: inline-grid;
-  margin: 20px;
+  margin: 10px;
   width: 500px;
 
 }
@@ -29,6 +29,7 @@ h1 {
   font-weight: normal;
   letter-spacing: -4px;
   display: inline;
+  text-decoration: none;
 }
 img {
   width: 500px;
@@ -50,9 +51,11 @@ img {
   background-color: #ff6666;
   /* border-radius: 8px; */
   height: 30px;
-  width: 500px;
+  width: 250px;
+  border: none;
+  display: inline-block;
 }
-a.button {
+.button {
   background-color: #4caf50;
   border: none;
   color: white;
@@ -62,20 +65,22 @@ a.button {
   font-size: 16px;
 }
 .reviews {
-  border: 2px black solid;
+  /* border: 2px black solid; */
+  border:none;
   color: black;
   text-decoration: none;
   text-align: center;
   /* border-radius: 8px; */
   height: 30px;
-  width: 500px;
+  width: 250px;
   font-size: 11pt;
+  display: inline-block;
+  background-color:#f8e078;
 }
 .banner {
   border-radius: 12px;
-  width: 900px;
-  height: auto;
-  padding-left: 100px;
+  width: 80%;
+  height: 600px;
   opacity: 0.8;
 }
 .login {
@@ -99,4 +104,12 @@ textarea {
   width: 400px;
   font-size: 11pt;
   margin-left: 50px;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+a {
+  text-decoration: none;
+  color: black;
 }

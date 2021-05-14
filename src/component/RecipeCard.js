@@ -36,8 +36,10 @@ function RecipeCard({ recipe , onDelete}) {
         </div>
             : null}
         <br/>
-      <Link to={`/recipes/${id}`} className="reviews">View Reviews</Link>
-      <button onClick={handleDelete} className="delete">Delete</button>
+        <div className="flex">
+          <Link to={`/recipes/${id}`} className="reviews">View Reviews</Link>
+          <button onClick={handleDelete} className="delete">Delete</button>
+        </div>
       
     </div>
   );

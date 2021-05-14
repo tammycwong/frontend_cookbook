@@ -8,6 +8,6 @@ function RccChild({ selectedRecipe }) {
           <p>Comment:{selectedRecipe[0].comment} </p> 
         </div>
       )
-    } else return "Nah tho"
+    } else return "Be the first to review this recipe!"
 }
 export default RccChild;

@@ -1,21 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
-import NewCommentForm from "./NewCommentForm";
-import ReviewCardComponent from "./ReviewCardComponent";
-function Reviews({ recipesData}) {
-  let {id} = useParams()
-  console.log(id)
-  const rr = recipesData.map((recipe_hash) => {
-    return recipe_hash.reviews;
-  });
-  const review = rr.flat().map((review) => {
-    return (review = { review });
-  });
+import RccChild from "./RccChild";
+function ReviewCardComponent({review, id}) {
+  const test = review.map((review1)=> {
+    return review1.review;
+  })
+ console.log(test)
+  const test2 = test.filter(correctRecipe => correctRecipe.recipe_id == id)
+  console.log(test2)
   return (
     <div>
-      <ReviewCardComponent review={review} id={id}/>
-      <NewCommentForm />
+       <RccChild key={id} selectedRecipe={test2} />
     </div>
-  );
+  )
 }
-export default Reviews;
+export default ReviewCardComponent;

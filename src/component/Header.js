@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <h1>Gourmet Cannabis Cookbook</h1>
+      <Link to={`/`}><h1>Gourmet Cannabis Cookbook</h1></Link>
       <br/>
       <span>
         <Link className="button" to="/all-recipes">
