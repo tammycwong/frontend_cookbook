@@ -1,21 +1,13 @@
-import React, {useEffect} from "react";
-function RccChild({review2, id}) {
-    // const {rating, comment, recipe_id, user_id} = review2
-
-    useEffect(() => {
-        fetch(`http://localhost:9292/recipes/${id}`)
-          .then(res => res.json())
-          .then(toysArr => {
-            console.log(toysArr)
-          })
-      }, [id])
-
-    return (
+import React from "react";
+function RccChild({ selectedRecipe }) {
+  console.log(selectedRecipe)
+    if (selectedRecipe[0]){
+      return (
         <div>
-            <p>Rating: </p>
-            <p>Comment:</p>
+          <p>Rating:{selectedRecipe[0].rating} </p>
+          <p>Comment:{selectedRecipe[0].comment} </p> 
         </div>
-    )
+      )
+    } else return "Nah tho"
 }
-
 export default RccChild;

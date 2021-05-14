@@ -5,6 +5,7 @@ function Header() {
   return (
     <div>
       <h1>Gourmet Cannabis Cookbook</h1>
+      <br/>
       <span>
         <Link className="button" to="/all-recipes">
           All Recipes

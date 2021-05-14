@@ -29,13 +29,13 @@ function AddRecipe({onAddRecipe}) {
                 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Add Recipe</label><br/>
-            <input onChange={e => setRecipeName(e.target.value)} type="text" placeholder="Recipe Name" value={recipeName}/><br/>
-            <input onChange={e => setImg(e.target.value)} type="url" placeholder="image" value={img}/><br/>
-            <textarea onChange={e => setNewIngredients(e.target.value)} type="text" placeholder="ingredients" height="600px" value={newIngredients}></textarea><br/>
-            <textarea onChange={e => setNewDirections(e.target.value)} type="text" placeholder="directions" height="600px" value={newDirections}></textarea><br/>
-            <button type="submit">Submit</button>
+        <form onSubmit={handleSubmit} className="login">
+            <h1>Add New Recipe:</h1><br/><br/>
+            <input onChange={e => setRecipeName(e.target.value)} type="text" placeholder="Recipe Name" value={recipeName}/><br/><br/>
+            <input onChange={e => setImg(e.target.value)} type="url" placeholder="image" value={img}/><br/><br/>
+            <textarea onChange={e => setNewIngredients(e.target.value)} type="text" placeholder="ingredients" value={newIngredients}></textarea><br/><br/>
+            <textarea onChange={e => setNewDirections(e.target.value)} type="text" placeholder="directions" value={newDirections}></textarea><br/>
+            <button type="submit" className="reviews">Submit</button>
         </form>
     )
 }

@@ -28,6 +28,7 @@ h1 {
   margin: 0;
   font-weight: normal;
   letter-spacing: -4px;
+  display: inline;
 }
 img {
   width: 500px;
@@ -43,12 +44,13 @@ img {
   justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 130px;
 }
 .delete {
   background-color: #ff6666;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   height: 30px;
-  width: 250px;
+  width: 500px;
 }
 a.button {
   background-color: #4caf50;
@@ -57,7 +59,6 @@ a.button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 .reviews {
@@ -65,9 +66,9 @@ a.button {
   color: black;
   text-decoration: none;
   text-align: center;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   height: 30px;
-  width: 250px;
+  width: 500px;
   font-size: 11pt;
 }
 .banner {
@@ -76,4 +77,26 @@ a.button {
   height: auto;
   padding-left: 100px;
   opacity: 0.8;
+}
+.login {
+  padding: 30px;
+}
+input {
+  height: 30px;
+  width: 400px;
+}
+textarea {
+  width: 400px;
+  height: 300px;
+}
+.homebutton {
+  border: 2px black solid;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  height: 40px;
+  width: 400px;
+  font-size: 11pt;
+  margin-left: 50px;
 }

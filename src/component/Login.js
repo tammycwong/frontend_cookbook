@@ -10,16 +10,21 @@ function Login() {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login">
+      <h1>Login:</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username"> Username: </label>
         <input
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-        />
-        <button type="submit">Login</button>
+        /><br/>
+        <br/>
+        <label htlmlFor="password"> Password: </label>
+        <input id="password" type="password"></input>
+        <br/>
+        <br/>
+        <button type="submit" className="reviews">Login</button>
       </form>
     </div>
   );

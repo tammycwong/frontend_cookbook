@@ -18,6 +18,11 @@ function RecipeCard({ recipe , onDelete}) {
             onDelete(id)
       })
   }
+    // function handleViewRecipe() {
+    //     fetch(`http://localhost:9292/recipes/${id}`, {
+    //         method:
+    //     })
+    // }
 
   return (
     <div className="card">
@@ -31,8 +36,8 @@ function RecipeCard({ recipe , onDelete}) {
         </div>
             : null}
         <br/>
-        <button onClick={handleDelete} className="delete">Delete</button>
       <Link to={`/recipes/${id}`} className="reviews">View Reviews</Link>
+      <button onClick={handleDelete} className="delete">Delete</button>
       
     </div>
   );
